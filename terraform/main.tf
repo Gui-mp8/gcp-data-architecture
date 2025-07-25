@@ -41,3 +41,14 @@ module "bigquery" {
   project_id = var.project_id
   region = var.region
 }
+
+module "astro_iam" {
+  source               = "./iam"
+  project_id           = var.project_id
+  service_account_id   = "airflow-astro"
+  display_name         = "Astronomer Airflow Service Account"
+  roles = [
+    "roles/storage.admin",   # para inserir objetos no GCS
+    "roles/bigquery.admin"   # para administrar BQ e transferir dados
+  ]
+}
