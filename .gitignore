@@ -205,3 +205,30 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#tarraform
+# — State files (contêm URLs, IDs de recursos, outputs, etc.)
+*.tfstate
+*.tfstate.*
+ 
+# — Backup automático
+*.tfstate.backup
+
+
+
+# — Arquivos de variáveis que podem conter segredos
+*.tfvars
+*.tfvars.json
+
+# — Overrides locais (não fazem parte do código compartilhado)
+override.tf
+override.tf.json
+*_override.tf
+
+# — Logs de crash do Terraform
+crash.log
+
+# — Se você gera arquivos de plano localmente e não quer comitar:
+*.tfplan
+.terraform.lock.hcl
+.terraform
