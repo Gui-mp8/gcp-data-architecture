@@ -1,0 +1,25 @@
+[
+  { "name": "product_id",      "type": "STRING",  "mode": "REQUIRED" },
+  { "name": "name",            "type": "STRING",  "mode": "REQUIRED" },
+  { "name": "category",        "type": "STRING",  "mode": "REQUIRED" },
+  { "name": "subcategory",     "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "price",           "type": "STRING", "mode": "REQUIRED" },
+  { "name": "cost",            "type": "STRING", "mode": "REQUIRED" },
+  { "name": "stock_quantity",  "type": "STRING",   "mode": "REQUIRED" },
+  { "name": "supplier_id",     "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "last_updated",    "type": "STRING","mode": "REQUIRED" },
+  {
+    "name": "attributes",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      { "name": "brand",       "type": "STRING", "mode": "NULLABLE" },
+      { "name": "ram",         "type": "STRING", "mode": "NULLABLE" },
+      { "name": "storage",     "type": "STRING", "mode": "NULLABLE" },
+      { "name": "processor",   "type": "STRING", "mode": "NULLABLE" },
+      { "name": "screen_size", "type": "STRING", "mode": "NULLABLE" },
+      { "name": "weight",      "type": "STRING", "mode": "NULLABLE" }
+    ]
+  },
+  { "name": "tags",            "type": "STRING", "mode": "REPEATED" }
+]
